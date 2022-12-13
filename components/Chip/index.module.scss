@@ -1,0 +1,15 @@
+$light-blue-100: #b3e5fc;
+.chip {
+    margin: 5px;
+    padding: 2px 8px;
+    background: $light-blue-100;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    vertical-align: middle;
+    letter-spacing: 0;
+  
+    &[data-mini="false"] {
+      margin-right: 10px;
+    }
+  }
+  

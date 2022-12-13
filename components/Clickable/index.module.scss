@@ -1,0 +1,101 @@
+$serif: "Lora", serif;
+$sans: "Poppins", sans-serif;
+$mono: "Cousine", monospace;
+
+$medium: 500;
+
+$black: #000000;
+$gray-200: #eeeeee;
+$white: #ffffff;
+$light-blue-100: #b3e5fc;
+$gray-800: #424242;
+$light-blue-500: #03a9f4;
+
+@mixin hover {
+  &:hover > *:not(:hover) {
+    opacity: 0.25 !important;
+  }
+}
+
+@mixin truncate {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.clickable {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    padding: 10px;
+    color: inherit;
+    border: none;
+    font-family: $sans;
+    font-size: 0.9em;
+    text-decoration: none;
+    min-width: 50px;
+    min-height: 50px;
+    margin: 20px 15px;
+    padding: 10px 15px;
+    background: $gray-200;
+    color: $black;
+  
+    &:not(:disabled):hover {
+      background: $light-blue-100;
+    }
+  
+    &:disabled {
+      cursor: not-allowed;
+    }
+  
+    &[data-icon="true"][data-text="false"] {
+      padding: 0;
+    }
+  
+    &[data-text="true"] {
+      padding: 10px 15px;
+    }
+  
+    &[data-active="false"] {
+      background: none;
+  
+      &:hover {
+        background: $gray-200;
+      }
+    }
+  
+    &[data-active="true"] {
+      background: $light-blue-100;
+    }
+  }
+  
+  .clickable[data-design="rounded"] {
+    min-width: 50px;
+    min-height: 50px;
+    margin: 20px 15px;
+    padding: 10px 15px;
+    border-radius: 999px;
+    background: $gray-800;
+    color: $white;
+  
+    &:hover {
+      background: $light-blue-500;
+    }
+  }
+  
+  .text {
+    text-align: center;
+    font-family: $sans;
+    font-weight: $medium;
+    @include truncate;
+  }
+  
+  .clickable[data-icon="true"][data-text="true"] .icon {
+    margin-right: 0.8em;
+  }
+  
+  .clickable[data-icon="true"][data-text="false"] .icon {
+    font-size: 1.2em;
+  }
+  
