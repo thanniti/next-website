@@ -2,7 +2,7 @@ import NormalLayout from "../../layouts/NormalLayout";
 import Section from "../../components/Section";
 import TopicHeader from "../../components/TopicHeader";
 import LessonCard from "../../components/LessonCard";
-import topics from "../../data/topics.yaml";
+import topics from "../../data/topics.json";
 import { lessonMeta } from "../../util/pages";
 import Clickable from "../../components/Clickable";
 
